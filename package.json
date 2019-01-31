@@ -38,11 +38,19 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
     "babel-preset-gatsby": "^0.1.6",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby-plugin-eslint": "^2.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.0.0",
     "jest-dom": "^3.0.1",
+    "prettier": "^1.16.3",
     "react-testing-library": "^5.4.4"
   }
 }
