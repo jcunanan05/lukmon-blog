@@ -1,5 +1,12 @@
-import React from 'react';
+import React from 'react'
+import Layout from '../components/Layout'
 
-const IndexPage = () => <h1>Index Page</h1>;
+const IndexPage = () => {
+  return (
+    <Layout>
+      <h1 className="title">Hello World</h1>
+    </Layout>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
