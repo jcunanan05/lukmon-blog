@@ -1,7 +1,9 @@
-import React from 'react';
+import React from 'react'
+import 'bulma/css/bulma.css'
+import './Layout.css'
 
-const Layout = ({ children }) => {
-  return <div className="layout">{children}</div>;
-};
+const Layout = ({ children, className = '' }) => {
+  return <div className={`Layout ${className}`}>{children}</div>
+}
 
-export default Layout;
+export default Layout
