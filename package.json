@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "lukmon-blog-client",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Blog powered by wordpress on the backend",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jonathan Cunanan <j_cunanan05@yahoo.com>",
   "dependencies": {
     "gatsby": "^2.0.107",
     "gatsby-image": "^2.0.29",
@@ -16,7 +16,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "rimraf": "^2.6.3"
   },
   "keywords": [
     "gatsby"
@@ -25,6 +26,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "clean": "rimraf .cache public",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest",
