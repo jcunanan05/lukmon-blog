@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.19",
     "gatsby-source-filesystem": "^2.0.19",
+    "gatsby-source-wordpress": "^3.0.30",
     "gatsby-transformer-sharp": "^2.1.13",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
@@ -24,8 +25,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "npm run clean && gatsby build",
+    "develop": "npm run clean && gatsby develop",
     "clean": "rimraf .cache public",
     "start": "npm run develop",
     "serve": "gatsby serve",
