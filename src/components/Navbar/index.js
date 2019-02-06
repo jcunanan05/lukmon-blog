@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Burger from './Burger'
+import './Navbar.css'
 
 const Navbar = ({
   isActive,
@@ -23,6 +25,13 @@ const Navbar = ({
     </nav>
   )
 }
+
+/**
+ * Navbar Container
+ * @param {object} navbarBrand - react component for navbar brand
+ * @param {object} navbarEnd - react component for navbar menu right
+ * @param {string} className - additional CSS
+ */
 
 class NavbarContainer extends Component {
   state = {
@@ -72,6 +81,12 @@ class NavbarContainer extends Component {
       </header>
     )
   }
+}
+
+NavbarContainer.propTypes = {
+  navbarEnd: PropTypes.object,
+  navbarBrand: PropTypes.object,
+  className: PropTypes.string,
 }
 
 export default NavbarContainer

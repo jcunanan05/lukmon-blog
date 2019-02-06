@@ -1,0 +1,5 @@
+.Navbar.theme--Primary,
+.Navbar.theme--Primary .NavbarItem,
+.Navbar.theme--Primary .NavbarItem .title {
+  color: #2e7d32 !important;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 const Navbar = ({ isActive, navbarEnd, navbarBrand, className }) => {
   const isMenuActive = isActive ? 'is-active' : ''
@@ -32,6 +33,12 @@ class NavbarContainer extends Component {
       </header>
     )
   }
+}
+
+NavbarContainer.propTypes = {
+  navbarEnd: PropTypes.object,
+  navbarBrand: PropTypes.object,
+  className: PropTypes.string,
 }
 
 export default NavbarContainer
