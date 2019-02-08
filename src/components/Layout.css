@@ -2,3 +2,7 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+.Layout .Navbar {
+  box-shadow: 0px 0px 9px -3px #333;
+}

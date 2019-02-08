@@ -10,7 +10,7 @@ const Layout = ({ children, className = '' }) => {
     <div className={`Layout ${className}`}>
       <Navbar
         navbarBrand={
-          <NavbarItem text={<h1 className="title is-5">Lukmon</h1>} />
+          <NavbarItem text={<h1 className="title is-4">Lukmon</h1>} />
         }
         navbarEnd={<NavbarItem text="Login" />}
         className="theme--Primary"
