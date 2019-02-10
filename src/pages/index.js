@@ -12,7 +12,7 @@ const IndexPage = () => {
             <h2 className="title">Latest Posts</h2>
             <PostsSection />
           </div>
-          <div className="column is-4 box" />
+          <div className="column is-4" />
         </div>
       </Section>
     </Layout>

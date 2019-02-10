@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import Post from '../Post'
 
 class PostList extends Component {
   renderPosts = () => {
     const { edges } = this.props.posts
     return edges.map(edge => {
-      const { id, title, excerpt, author, date } = edge.node
+      const { id, title, excerpt, author, date, slug } = edge.node
+      const { name } = author
       return (
-        <article className="box content" key={id}>
-          <h1 className="title is-4">{title}</h1>
-          <p className="subtitle is-6">
-            {author.name} at {date}
-          </p>
-          <div dangerouslySetInnerHTML={{ __html: excerpt }} />
-        </article>
+        <Post
+          className="box"
+          key={id}
+          author={name}
+          content={excerpt}
+          title={title}
+          date={date}
+          slug={slug}
+        />
       )
     })
   }
