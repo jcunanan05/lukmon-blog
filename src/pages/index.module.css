@@ -1,0 +1,8 @@
+.SecondColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.SecondColumn .Box {
+  flex: 1;
+}

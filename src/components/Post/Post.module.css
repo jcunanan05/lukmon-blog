@@ -1,0 +1,11 @@
+.Post .Title a {
+  color: #2e7d32 !important;
+}
+
+.Post .Title a:hover {
+  color: #215c24 !important;
+}
+
+.Subtitle {
+  font-weight: bold;
+}
