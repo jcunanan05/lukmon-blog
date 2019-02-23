@@ -17,6 +17,17 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: [
+            'Merriweather:400,400i,900,900i',
+            'Roboto:400,400i,700,700i,900,900i',
+          ],
+        },
+      },
+    },
+    {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
