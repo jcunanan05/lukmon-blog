@@ -14,7 +14,6 @@ class PostList extends Component {
       const { name } = author
       return (
         <Post
-          className="box"
           key={id}
           author={name}
           content={excerpt}
