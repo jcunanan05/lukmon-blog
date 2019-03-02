@@ -10,7 +10,15 @@ class PostList extends Component {
   renderPosts = () => {
     const { edges } = this.props.posts
     return edges.map(edge => {
-      const { id, title, excerpt, author, date, slug } = edge.node
+      const {
+        id,
+        title,
+        excerpt,
+        author,
+        date,
+        slug,
+        featured_media,
+      } = edge.node
       const { name } = author
       return (
         <Post
@@ -20,6 +28,7 @@ class PostList extends Component {
           title={title}
           date={date}
           slug={slug}
+          photo={featured_media}
         />
       )
     })
