@@ -7,31 +7,28 @@ import Post from './index'
  */
 
 class PostList extends Component {
+  renderPost(post) {
+    const { id, title, excerpt, author, date, slug, featured_media } = post
+    const photo = () => {
+      if (featured_media === null) return null
+      return featured_media.localFile.childImageSharp.fixed.src
+    }
+    return (
+      <Post
+        key={id}
+        author={author.name}
+        content={excerpt}
+        title={title}
+        date={date}
+        slug={slug}
+        photoUrl={photo()}
+      />
+    )
+  }
+
   renderPosts = () => {
-    const { edges } = this.props.posts
-    return edges.map(edge => {
-      const {
-        id,
-        title,
-        excerpt,
-        author,
-        date,
-        slug,
-        featured_media,
-      } = edge.node
-      const { name } = author
-      return (
-        <Post
-          key={id}
-          author={name}
-          content={excerpt}
-          title={title}
-          date={date}
-          slug={slug}
-          photo={featured_media}
-        />
-      )
-    })
+    if (!this.props.posts) return null
+    return this.props.posts.map(({ node: post }) => this.renderPost(post))
   }
 
   render() {

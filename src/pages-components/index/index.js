@@ -5,14 +5,13 @@ import PostList from './Post/PostList'
 import style from './index.module.css'
 
 const IndexPage = ({ data }) => {
-  const { allWordpressPost } = data
   return (
     <Layout>
       <Section>
         <div className="columns">
           <div className="column is-8">
             <h2 className="title is-3">Latest Posts</h2>
-            <PostList posts={allWordpressPost} />
+            <PostList posts={data.allWordpressPost.edges} />
           </div>
           <div
             className={`

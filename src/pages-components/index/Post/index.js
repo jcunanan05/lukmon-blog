@@ -2,15 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import style from './Post.module.css'
 
-const PostImage = ({ media = null }) => {
-  if (!media) return null
-  return (
-    <img
-      className="image content"
-      src={media.localFile.childImageSharp.fixed.src}
-      alt="Post"
-    />
-  )
+const PostImage = ({ url }) => {
+  if (!url) return null
+  return <img className="image content" src={url} alt="Post" />
 }
 
 const PostTitle = ({ title, slug }) => {
@@ -38,7 +32,7 @@ const Post = ({
   date,
   content,
   slug = '',
-  photo,
+  photoUrl,
 }) => {
   return (
     <article
@@ -48,7 +42,7 @@ const Post = ({
         ${style.Post}
       `}
     >
-      <PostImage media={photo} />
+      <PostImage url={photoUrl} />
       <PostTitle title={title} slug={slug} />
       <p
         className={`
