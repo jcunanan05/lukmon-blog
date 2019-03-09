@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Post from './index'
 
 /**
@@ -32,7 +32,7 @@ class PostList extends Component {
   }
 
   render() {
-    return <div>{this.renderPosts()}</div>
+    return <Fragment>{this.renderPosts()}</Fragment>
   }
 }
 

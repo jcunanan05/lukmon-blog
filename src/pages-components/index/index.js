@@ -11,7 +11,9 @@ const IndexPage = ({ data }) => {
         <div className="columns">
           <div className="column is-8">
             <h2 className="title is-3">Latest Posts</h2>
-            <PostList posts={data.allWordpressPost.edges} />
+            <div className={style.PostListContainer}>
+              <PostList posts={data.allWordpressPost.edges} />
+            </div>
           </div>
           <div
             className={`
@@ -19,8 +21,8 @@ const IndexPage = ({ data }) => {
               ${style.SecondColumn}
             `}
           >
-            <h2 className="title is-3">Popular</h2>
-            <div className={`box ${style.Box}`} />
+            {/* <h2 className="title is-3">Popular</h2>
+            <div className={`box ${style.Box}`} /> */}
           </div>
         </div>
       </Section>

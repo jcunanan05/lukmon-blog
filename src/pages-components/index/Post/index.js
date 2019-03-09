@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from '@reach/router'
 import style from './Post.module.css'
 
 const PostImage = ({ url }) => {
   if (!url) return null
-  return <img className="image content" src={url} alt="Post" />
+  return <img className={`image ${style.PostImage}`} src={url} alt="Post" />
 }
 
 const PostTitle = ({ title, slug }) => {

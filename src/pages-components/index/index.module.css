@@ -6,3 +6,9 @@
 .SecondColumn .Box {
   flex: 1;
 }
+
+@media (min-width: 769px) {
+  .PostListContainer {
+    padding-right: 1rem;
+  }
+}
