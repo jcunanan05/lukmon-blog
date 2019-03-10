@@ -2,11 +2,13 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Section from '../../components/Section'
 import PostList from './Post/PostList'
+import SEO from '../../components/Seo'
 import style from './index.module.css'
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Home" />
       <Section>
         <div className="columns">
           <div className="column is-8">
